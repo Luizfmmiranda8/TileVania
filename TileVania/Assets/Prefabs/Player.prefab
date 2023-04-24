@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 2245030102044858875}
   - component: {fileID: 755476428684541803}
   - component: {fileID: 3711648680050604877}
+  - component: {fileID: 6871842109825660243}
+  - component: {fileID: 4284978610244665961}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -144,3 +146,45 @@ CapsuleCollider2D:
   m_Offset: {x: -0.04959321, y: -0.073397756}
   m_Size: {x: 0.48026228, y: 0.8770087}
   m_Direction: 0
+--- !u!114 &6871842109825660243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2245030102044858872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: b740df750a52eef4497031961280bf4f, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &4284978610244665961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2245030102044858872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5579d9518544a514d8bf1fbd72ff1275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
