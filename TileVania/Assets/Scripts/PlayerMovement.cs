@@ -6,18 +6,20 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     #region VARIABLES
+    [SerializeField] float runSpeed = 10f;
     Vector2 moveInput;
+    Rigidbody2D rb;
     #endregion
 
     #region EVENTS
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        
+        Run();
     }
     #endregion
 
@@ -26,6 +28,12 @@ public class PlayerMovement : MonoBehaviour
     {
         moveInput = value.Get<Vector2>();
         Debug.Log(moveInput);
+    }
+
+    void Run()
+    {
+        Vector2 playerVelocity = new Vector2(moveInput.x * runSpeed, rb.velocity.y);
+        rb.velocity = playerVelocity;
     }
     #endregion
 }
