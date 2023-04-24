@@ -9,12 +9,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float runSpeed = 10f;
     Vector2 moveInput;
     Rigidbody2D rb;
+    Animator myAnimator;
     #endregion
 
     #region EVENTS
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        myAnimator = GetComponent<Animator>();
     }
 
     void Update()
@@ -35,6 +37,9 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 playerVelocity = new Vector2(moveInput.x * runSpeed, rb.velocity.y);
         rb.velocity = playerVelocity;
+
+        bool isPlayerMoving = Mathf.Abs(rb.velocity.x) > Mathf.Epsilon;
+        myAnimator.SetBool("isRunning", isPlayerMoving);
     }
 
     void FlipSprite()
