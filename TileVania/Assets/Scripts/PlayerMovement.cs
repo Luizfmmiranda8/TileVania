@@ -7,9 +7,11 @@ public class PlayerMovement : MonoBehaviour
 {
     #region VARIABLES
     [SerializeField] float runSpeed = 10f;
+    [SerializeField] float jumpSpeed = 5f;
     Vector2 moveInput;
     Rigidbody2D rb;
     Animator myAnimator;
+    CapsuleCollider2D myCollider;
     #endregion
 
     #region EVENTS
@@ -17,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
+        myCollider = GetComponent<CapsuleCollider2D>();
     }
 
     void Update()
@@ -30,7 +33,14 @@ public class PlayerMovement : MonoBehaviour
     void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
-        Debug.Log(moveInput);
+    }
+
+    void OnJump(InputValue value)
+    {
+        if(myCollider.IsTouchingLayers(LayerMask.GetMask("Ground")) && value.isPressed)
+        {
+            rb.velocity += new Vector2(0f, jumpSpeed);
+        }
     }
 
     void Run()
