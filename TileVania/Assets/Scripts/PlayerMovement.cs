@@ -10,21 +10,21 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float jumpSpeed = 5f;
     [SerializeField] float climbSpeed = 2f;
     Vector2 moveInput;
-    Rigidbody2D rb;
-    Animator myAnimator;
-    CapsuleCollider2D myBodyCollider;
-    BoxCollider2D myFeetCollider;
+    Rigidbody2D playerRigidbody;
+    Animator playerAnimator;
+    CapsuleCollider2D playerBodyCollider;
+    BoxCollider2D playerFeetCollider;
     float gravityScaleAtStart;
     #endregion
 
     #region EVENTS
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        gravityScaleAtStart = rb.gravityScale;
-        myAnimator = GetComponent<Animator>();
-        myBodyCollider = GetComponent<CapsuleCollider2D>();
-        myFeetCollider = GetComponent<BoxCollider2D>();
+        playerRigidbody = GetComponent<Rigidbody2D>();
+        gravityScaleAtStart = playerRigidbody.gravityScale;
+        playerAnimator = GetComponent<Animator>();
+        playerBodyCollider = GetComponent<CapsuleCollider2D>();
+        playerFeetCollider = GetComponent<BoxCollider2D>();
     }
 
     void Update()
@@ -43,45 +43,45 @@ public class PlayerMovement : MonoBehaviour
 
     void OnJump(InputValue value)
     {
-        if(myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")) && value.isPressed)
+        if(playerFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")) && value.isPressed)
         {
-            rb.velocity += new Vector2(0f, jumpSpeed);
+            playerRigidbody.velocity += new Vector2(0f, jumpSpeed);
         }
     }
 
     void Run()
     {
-        Vector2 playerVelocity = new Vector2(moveInput.x * runSpeed, rb.velocity.y);
-        rb.velocity = playerVelocity;
+        Vector2 playerVelocity = new Vector2(moveInput.x * runSpeed, playerRigidbody.velocity.y);
+        playerRigidbody.velocity = playerVelocity;
 
-        bool isPlayerMoving = Mathf.Abs(rb.velocity.x) > Mathf.Epsilon;
-        myAnimator.SetBool("isRunning", isPlayerMoving);
+        bool isPlayerMoving = Mathf.Abs(playerRigidbody.velocity.x) > Mathf.Epsilon;
+        playerAnimator.SetBool("isRunning", isPlayerMoving);
     }
 
     void FlipSprite()
     {
-        bool isPlayerMoving = Mathf.Abs(rb.velocity.x) > Mathf.Epsilon;
+        bool isPlayerMoving = Mathf.Abs(playerRigidbody.velocity.x) > Mathf.Epsilon;
 
         if(isPlayerMoving)
         {
-            transform.localScale = new Vector2(Mathf.Sign(rb.velocity.x), 1f);
+            transform.localScale = new Vector2(Mathf.Sign(playerRigidbody.velocity.x), 1f);
         }
     }
 
     void ClimbLadder()
     {
-        if(!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ladder")))
+        if(!playerFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ladder")))
         {
-            rb.gravityScale = gravityScaleAtStart;
+            playerRigidbody.gravityScale = gravityScaleAtStart;
             return;
         }
 
-        Vector2 climbVelocity = new Vector2(rb.velocity.x, moveInput.y * climbSpeed);
-        rb.velocity = climbVelocity;
-        rb.gravityScale = 0f;
+        Vector2 climbVelocity = new Vector2(playerRigidbody.velocity.x, moveInput.y * climbSpeed);
+        playerRigidbody.velocity = climbVelocity;
+        playerRigidbody.gravityScale = 0f;
 
-        bool isPlayerClimbing = Mathf.Abs(rb.velocity.y) > Mathf.Epsilon;
-        myAnimator.SetBool("isClimbing", isPlayerClimbing);
+        bool isPlayerClimbing = Mathf.Abs(playerRigidbody.velocity.y) > Mathf.Epsilon;
+        playerAnimator.SetBool("isClimbing", isPlayerClimbing);
     }
     #endregion
 }
