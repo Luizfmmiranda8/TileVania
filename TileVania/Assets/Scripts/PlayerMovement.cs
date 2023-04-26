@@ -9,12 +9,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float runSpeed = 10f;
     [SerializeField] float jumpSpeed = 5f;
     [SerializeField] float climbSpeed = 2f;
+    [SerializeField] Vector2 deathKick = new Vector2(10f, 10f);
+    [SerializeField] GameObject gameOverPanel;
     Vector2 moveInput;
     Rigidbody2D playerRigidbody;
     Animator playerAnimator;
     CapsuleCollider2D playerBodyCollider;
     BoxCollider2D playerFeetCollider;
     float gravityScaleAtStart;
+    bool isAlive = true;
     #endregion
 
     #region EVENTS
@@ -29,23 +32,37 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        Run();
-        FlipSprite();
-        ClimbLadder();
+        if(isAlive)
+        {
+            Run();
+            FlipSprite();
+            ClimbLadder();
+        }
+
+        if(playerBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemies")))
+        {
+            Die();
+        }
     }
     #endregion
 
     #region METHODS
     void OnMove(InputValue value)
     {
-        moveInput = value.Get<Vector2>();
+        if(isAlive)
+        {
+            moveInput = value.Get<Vector2>();
+        }
     }
 
     void OnJump(InputValue value)
     {
-        if(playerFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")) && value.isPressed)
+        if(isAlive)
         {
-            playerRigidbody.velocity += new Vector2(0f, jumpSpeed);
+            if(playerFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")) && value.isPressed)
+            {
+                playerRigidbody.velocity += new Vector2(0f, jumpSpeed);
+            }
         }
     }
 
@@ -82,6 +99,16 @@ public class PlayerMovement : MonoBehaviour
 
         bool isPlayerClimbing = Mathf.Abs(playerRigidbody.velocity.y) > Mathf.Epsilon;
         playerAnimator.SetBool("isClimbing", isPlayerClimbing);
+    }
+
+    void Die()
+    {
+        isAlive = false;
+
+        playerAnimator.SetTrigger("isDead");
+        playerRigidbody.velocity = deathKick;
+
+        gameOverPanel.gameObject.SetActive(true);
     }
     #endregion
 }
