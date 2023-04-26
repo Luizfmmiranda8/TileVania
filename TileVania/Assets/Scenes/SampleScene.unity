@@ -28035,21 +28035,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4284978610244665961, guid: 0d6827a186182ac4c8ea711d4c759440, type: 3}
-      propertyPath: deathKick.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4284978610244665961, guid: 0d6827a186182ac4c8ea711d4c759440, type: 3}
-      propertyPath: deathKick.y
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4284978610244665961, guid: 0d6827a186182ac4c8ea711d4c759440, type: 3}
       propertyPath: gameOverPanel
       value: 
       objectReference: {fileID: 1443310746}
-    - target: {fileID: 7077287164692011367, guid: 0d6827a186182ac4c8ea711d4c759440, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 01c7937e78e84d94ab35226eb269169a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d6827a186182ac4c8ea711d4c759440, type: 3}
 --- !u!1001 &5044961265622278100
