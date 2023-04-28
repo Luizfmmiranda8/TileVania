@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
             ClimbLadder();
         }
 
-        if(playerBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemies")))
+        if(playerBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemies", "Hazards")))
         {
             Die();
         }
