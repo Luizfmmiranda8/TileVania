@@ -9,15 +9,21 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float runSpeed = 10f;
     [SerializeField] float jumpSpeed = 5f;
     [SerializeField] float climbSpeed = 2f;
+    [SerializeField] float shootTime = 2f;
     [SerializeField] Vector2 deathKick = new Vector2(10f, 10f);
     [SerializeField] GameObject gameOverPanel;
+    [SerializeField] GameObject bullet;
+    [SerializeField] Transform gun;
     Vector2 moveInput;
     Rigidbody2D playerRigidbody;
     Animator playerAnimator;
     CapsuleCollider2D playerBodyCollider;
     BoxCollider2D playerFeetCollider;
     float gravityScaleAtStart;
+    float shootTimeAtStart;
     bool isAlive = true;
+    bool canShoot = true;
+    bool isShooting = false;
     #endregion
 
     #region EVENTS
@@ -28,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
         playerBodyCollider = GetComponent<CapsuleCollider2D>();
         playerFeetCollider = GetComponent<BoxCollider2D>();
+        shootTimeAtStart = shootTime;
     }
 
     void Update()
@@ -37,6 +44,10 @@ public class PlayerMovement : MonoBehaviour
             Run();
             FlipSprite();
             ClimbLadder();
+            if(isShooting)
+            {
+                ShootTimer();
+            }
         }
 
         if(playerBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemies", "Hazards")))
@@ -63,6 +74,34 @@ public class PlayerMovement : MonoBehaviour
             {
                 playerRigidbody.velocity += new Vector2(0f, jumpSpeed);
             }
+        }
+    }
+
+    void OnFire(InputValue value)
+    {
+        if(isAlive)
+        {
+            if(canShoot)
+            {
+                playerAnimator.SetBool("isShooting", true);
+                Instantiate(bullet, gun.position, bullet.transform.rotation);
+
+                isShooting = true;
+                canShoot = false;          
+            }
+        }
+    }
+
+    void ShootTimer()
+    {
+        shootTime -= Time.deltaTime;
+
+        if(shootTime <= 0)
+        {
+            playerAnimator.SetBool("isShooting", false);
+            isShooting = false;
+            canShoot = true;
+            shootTime = shootTimeAtStart;
         }
     }
 

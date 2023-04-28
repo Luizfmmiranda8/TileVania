@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5044961265966607939}
   m_Layer: 11
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2021598821
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 1264731619, guid: 30aa6c803654fd948be9508a4b46a118, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -120,11 +120,11 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.031596184, y: -0.08214903}
-  m_Size: {x: 0.7725086, y: 0.78514767}
+  m_Offset: {x: 0.04437828, y: -0.123622656}
+  m_Size: {x: 0.5360184, y: 0.65106726}
   m_Direction: 0
 --- !u!95 &5044961265966607941
 Animator:

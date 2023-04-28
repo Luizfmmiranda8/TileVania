@@ -28225,11 +28225,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4284978610244665961, guid: 0d6827a186182ac4c8ea711d4c759440, type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 2245030103383933986}
+    - target: {fileID: 4284978610244665961, guid: 0d6827a186182ac4c8ea711d4c759440, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 5187162129024946672, guid: e7f8bac3d3737fe438e2ad9b72f9bf88, type: 3}
+    - target: {fileID: 4284978610244665961, guid: 0d6827a186182ac4c8ea711d4c759440, type: 3}
+      propertyPath: shootTime
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284978610244665961, guid: 0d6827a186182ac4c8ea711d4c759440, type: 3}
       propertyPath: gameOverPanel
       value: 
       objectReference: {fileID: 1443310746}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d6827a186182ac4c8ea711d4c759440, type: 3}
+--- !u!4 &2245030103383933986 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1528780547494219330, guid: 0d6827a186182ac4c8ea711d4c759440, type: 3}
+  m_PrefabInstance: {fileID: 2245030103383933985}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5044961265622278100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28284,26 +28301,6 @@ PrefabInstance:
     - target: {fileID: 5044961265966607940, guid: b0182dfcc87bd4b44aecc8f9e0f5eab5, type: 3}
       propertyPath: m_Name
       value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 5044961265966607942, guid: b0182dfcc87bd4b44aecc8f9e0f5eab5, type: 3}
-      propertyPath: m_Size.x
-      value: 0.5360184
-      objectReference: {fileID: 0}
-    - target: {fileID: 5044961265966607942, guid: b0182dfcc87bd4b44aecc8f9e0f5eab5, type: 3}
-      propertyPath: m_Size.y
-      value: 0.65106726
-      objectReference: {fileID: 0}
-    - target: {fileID: 5044961265966607942, guid: b0182dfcc87bd4b44aecc8f9e0f5eab5, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.04437828
-      objectReference: {fileID: 0}
-    - target: {fileID: 5044961265966607942, guid: b0182dfcc87bd4b44aecc8f9e0f5eab5, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.123622656
-      objectReference: {fileID: 0}
-    - target: {fileID: 5044961265966607942, guid: b0182dfcc87bd4b44aecc8f9e0f5eab5, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0182dfcc87bd4b44aecc8f9e0f5eab5, type: 3}
