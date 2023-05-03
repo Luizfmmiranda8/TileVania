@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Vector2 deathKick = new Vector2(10f, 10f);
     [SerializeField] GameObject bullet;
     [SerializeField] Transform gun;
+    [SerializeField] AudioClip arrowSFX;
     Vector2 moveInput;
     Rigidbody2D playerRigidbody;
     Animator playerAnimator;
@@ -84,6 +85,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 playerAnimator.SetBool("isShooting", true);
                 Instantiate(bullet, gun.position, bullet.transform.rotation);
+                AudioSource.PlayClipAtPoint(arrowSFX, Camera.main.transform.position);
 
                 isShooting = true;
                 canShoot = false;          
