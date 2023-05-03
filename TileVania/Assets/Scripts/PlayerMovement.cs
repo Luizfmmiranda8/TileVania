@@ -11,7 +11,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float climbSpeed = 2f;
     [SerializeField] float shootTime = 2f;
     [SerializeField] Vector2 deathKick = new Vector2(10f, 10f);
-    [SerializeField] GameObject gameOverPanel;
     [SerializeField] GameObject bullet;
     [SerializeField] Transform gun;
     Vector2 moveInput;
@@ -147,7 +146,7 @@ public class PlayerMovement : MonoBehaviour
         playerAnimator.SetTrigger("isDead");
         playerRigidbody.velocity = deathKick;
 
-        gameOverPanel.gameObject.SetActive(true);
+        FindObjectOfType<GameSession>().ProcessPlayerDeath();
     }
     #endregion
 }
