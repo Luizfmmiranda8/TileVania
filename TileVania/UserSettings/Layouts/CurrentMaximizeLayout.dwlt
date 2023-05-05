@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 7002
+  controlID: 12059
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 6967
+  controlID: 12060
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 6895
+  controlID: 11989
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,7 +226,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 94bdffffc0bdffff00c0ffff48c2ffffe4c4ffffcac6ffff3ef9ffff0cfbffff
+      m_ExpandedIDs: c07affff487bffff507dffff7a7dffff94bdffffc0bdffff00c0ffff48c2ffffe4c4ffffcac6ffff3ef9ffff0cfbffff06a2000058d40000b0d50000ded50000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -558,9 +558,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.093927875, y: 2.203888, z: -9.987555}
+    m_Target: {x: 52.150414, y: 1.6870232, z: -10.686858}
     speed: 2
-    m_Value: {x: -0.093927875, y: 2.203888, z: -9.987555}
+    m_Value: {x: 52.150414, y: 1.6870232, z: -10.686858}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -611,9 +611,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 10.0383005
+    m_Target: 6.8256216
     speed: 2
-    m_Value: 10.0383005
+    m_Value: 6.8256216
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -690,7 +690,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 6968
+  controlID: 12061
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -759,21 +759,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Unity Hub\Projects\TileVania\TileVania
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 8.600006}
-    m_SelectedIDs: 6e640000
-    m_LastClickedID: 25710
+    scrollPos: {x: 0, y: 40.600006}
+    m_SelectedIDs: 6c640000
+    m_LastClickedID: 25708
     m_ExpandedIDs: 000000002c64000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -827,8 +827,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 9c0d0000
-    m_LastClickedInstanceID: 3484
+    m_SelectedInstanceIDs: 32d50000
+    m_LastClickedInstanceID: 54578
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000725e00006e600000d26200004e640000
     m_RenameOverlay:
@@ -854,7 +854,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 120}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -997,9 +997,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 0e5575d2eeaa5584e9d2c4af495bf336, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: 1a20c2376a60b7b4e92e3be308fa4d7f, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 4381784672043558202, guid: 0e5575d2eeaa5584e9d2c4af495bf336, type: 2}
+  - m_Target: {fileID: -7764617007905234572, guid: 1a20c2376a60b7b4e92e3be308fa4d7f, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -1042,7 +1042,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -1730
+  m_LastSelectedObjectID: 54578
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1138,7 +1138,7 @@ MonoBehaviour:
     m_CachedPref: -151
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 3484
+  m_LastInspectedObjectInstanceID: 54578
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
