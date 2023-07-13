@@ -230,6 +230,7 @@ MonoBehaviour:
   bullet: {fileID: 5187162129024946672, guid: e7f8bac3d3737fe438e2ad9b72f9bf88, type: 3}
   gun: {fileID: 1528780547494219330}
   arrowSFX: {fileID: 8300000, guid: f2640303c1950484db5ffec853604a13, type: 3}
+  deathSFX: {fileID: 8300000, guid: e868f2689faa65f439de85fc936152d9, type: 3}
 --- !u!61 &7077287164692011367
 BoxCollider2D:
   m_ObjectHideFlags: 0
