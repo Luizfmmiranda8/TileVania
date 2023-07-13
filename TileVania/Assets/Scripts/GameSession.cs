@@ -40,11 +40,11 @@ public class GameSession : MonoBehaviour
     {
         if(playerLives > 1)
         {
-            TakeLife();
+            Invoke("TakeLife", 1f);
         }
         else
         {
-            GameOver();
+            Invoke("GameOver", 1f);
         }
     }
 

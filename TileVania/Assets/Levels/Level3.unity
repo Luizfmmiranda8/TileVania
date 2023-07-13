@@ -106414,29 +106414,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4284978610244665961, guid: 0d6827a186182ac4c8ea711d4c759440, type: 3}
-      propertyPath: gun
-      value: 
-      objectReference: {fileID: 2245030103383933986}
-    - target: {fileID: 4284978610244665961, guid: 0d6827a186182ac4c8ea711d4c759440, type: 3}
-      propertyPath: bullet
-      value: 
-      objectReference: {fileID: 5187162129024946672, guid: e7f8bac3d3737fe438e2ad9b72f9bf88, type: 3}
-    - target: {fileID: 4284978610244665961, guid: 0d6827a186182ac4c8ea711d4c759440, type: 3}
-      propertyPath: shootTime
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4284978610244665961, guid: 0d6827a186182ac4c8ea711d4c759440, type: 3}
-      propertyPath: gameOverPanel
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d6827a186182ac4c8ea711d4c759440, type: 3}
---- !u!4 &2245030103383933986 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1528780547494219330, guid: 0d6827a186182ac4c8ea711d4c759440, type: 3}
-  m_PrefabInstance: {fileID: 2245030103383933985}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8022183668059709383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -106534,15 +106513,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8022183668021077831, guid: c8ae695465a03aa468002794332bfd16, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.6172333
+      value: -5.40125
       objectReference: {fileID: 0}
     - target: {fileID: 8022183668021077831, guid: c8ae695465a03aa468002794332bfd16, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.44240534
+      value: 0.4311458
       objectReference: {fileID: 0}
     - target: {fileID: 8022183668021077944, guid: c8ae695465a03aa468002794332bfd16, type: 3}
       propertyPath: orthographic size
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8022183668154775834, guid: c8ae695465a03aa468002794332bfd16, type: 3}
       propertyPath: m_Follow

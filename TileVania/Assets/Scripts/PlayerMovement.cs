@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] GameObject bullet;
     [SerializeField] Transform gun;
     [SerializeField] AudioClip arrowSFX;
+    [SerializeField] AudioClip deathSFX;
     Vector2 moveInput;
     Rigidbody2D playerRigidbody;
     Animator playerAnimator;
@@ -48,12 +49,14 @@ public class PlayerMovement : MonoBehaviour
             {
                 ShootTimer();
             }
+            
+            if(playerBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemies", "Hazards")))
+            {
+                AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position);
+                Die();
+            }
         }
 
-        if(playerBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemies", "Hazards")))
-        {
-            Die();
-        }
     }
     #endregion
 
